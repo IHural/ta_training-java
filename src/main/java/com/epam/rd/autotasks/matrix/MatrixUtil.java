@@ -5,7 +5,31 @@ import java.util.Arrays;
 public class MatrixUtil {
 
 	public static void transformMatrix(int[][] matrix) {
-		// TODO: Implement this method.
+		try {
+				if (matrix != null){
+					int n = matrix.length;
+					for (int i = 0; i < n; i++) {
+						for (int j = 0; j < n; j++) {
+							if (i < j) {
+								matrix[i][j] = 1;
+							}
+							else if (i > j) {
+								matrix[i][j] = 0;
+							}
+
+						}
+					}
+				}
+				else{
+					throw new NullPointerException("Please enter a matrix!");
+				}
+			}
+			catch(NullPointerException e) {
+				System.out.println(e.getMessage());
+			}
+			catch (ArrayIndexOutOfBoundsException e2) {
+				System.out.println(e2.getMessage());
+			}
 	}
 
 	public static void main(String[] args) {
