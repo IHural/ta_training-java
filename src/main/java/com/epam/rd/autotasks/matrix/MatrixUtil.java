@@ -24,11 +24,8 @@ public class MatrixUtil {
 					throw new NullPointerException("Please enter a matrix!");
 				}
 			}
-			catch(NullPointerException e) {
+			catch(NullPointerException | ArrayIndexOutOfBoundsException e) {
 				System.out.println(e.getMessage());
-			}
-			catch (ArrayIndexOutOfBoundsException e2) {
-				System.out.println(e2.getMessage());
 			}
 	}
 
